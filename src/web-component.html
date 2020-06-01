@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Component</title>
+  <script type="module">
+    import { defineCustomElements } from './custom-elements/index.mjs';
+    defineCustomElements(window);
+  </script>
+</head>
+<body>
+  <my-component locale="en" prop="0"></my-component>
+
+  <button onclick="document.querySelector('my-component').setAttribute('prop', Date.now());">Change prop</button>
+
+</body>
+</html>
