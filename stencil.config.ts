@@ -5,9 +5,7 @@ export const config: Config = {
   taskQueue: 'async',
   outputTargets: [
     {
-      type: 'dist-custom-elements-bundle',
-      externalRuntime: false,
-      inlineDynamicImports: true,
+      type: 'dist-custom-elements',
     },
     {
       type: 'dist',
@@ -28,12 +26,12 @@ export const config: Config = {
       ]
     },
     {
-      type: 'docs-readme'
+      type: 'docs-readme',
     },
     {
       type: 'www',
-      serviceWorker: null // disable service workers
-    }
+      serviceWorker: null, // disable service workers
+    },
   ],
-  minifyJs: false,
+  minifyJs: false
 };
